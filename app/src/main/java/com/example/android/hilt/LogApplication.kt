@@ -17,7 +17,11 @@
 package com.example.android.hilt
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
+// アプリのライフサイクルにアタッチされたコンテナ(アプリケーションコンテナ)
+// 他のコンテナは、親であるアプリケーションコンテナの提供する依存関係にアクセスできます。
+@HiltAndroidApp
 class LogApplication : Application() {
 
     lateinit var serviceLocator: ServiceLocator
