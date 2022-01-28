@@ -35,6 +35,7 @@ class ServiceLocator(applicationContext: Context) {
 
     val loggerLocalDataSource = LoggerLocalDataSource(logsDatabase.logDao())
 
+    //  DateFormatter は他のクラスに依存しないため、現時点では推移的な依存関係について心配する必要はありません
     fun provideDateFormatter() = DateFormatter()
 
     fun provideNavigator(activity: FragmentActivity): AppNavigator {
