@@ -22,12 +22,4 @@ import dagger.hilt.android.HiltAndroidApp
 // アプリのライフサイクルにアタッチされたコンテナ(アプリケーションコンテナ)
 // 他のコンテナは、親であるアプリケーションコンテナの提供する依存関係にアクセスできます。
 @HiltAndroidApp
-class LogApplication : Application() {
-
-    lateinit var serviceLocator: ServiceLocator
-
-    override fun onCreate() {
-        super.onCreate()
-        serviceLocator = ServiceLocator(applicationContext)
-    }
-}
+class LogApplication : Application()
