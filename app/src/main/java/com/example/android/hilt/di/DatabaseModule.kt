@@ -10,6 +10,10 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+// Hilt モジュールには、コンストラクタで注入できない型
+// （プロジェクトに含まれていないインターフェースやクラスなど）
+// にバインディングを追加できます。
+// 今回の場合Roomは@Injectアノテーションをつけられないのでprovide関数が必要
 @InstallIn(SingletonComponent::class)
 @Module
 object DatabaseModule {
