@@ -23,6 +23,7 @@ import com.example.android.hilt.R
 import com.example.android.hilt.navigator.AppNavigator
 import com.example.android.hilt.navigator.Screens
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 /**
  * Main activity of the application.
@@ -32,7 +33,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var navigator: AppNavigator
+    @Inject lateinit var navigator: AppNavigator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
