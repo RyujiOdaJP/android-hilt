@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        navigator = (applicationContext as LogApplication).serviceLocator.provideNavigator(this)
-
         if (savedInstanceState == null) {
             navigator.navigateTo(Screens.BUTTONS)
         }
