@@ -34,10 +34,13 @@ import javax.inject.Inject
  * Fragment that displays buttons whose interactions are recorded.
  */
 @AndroidEntryPoint
-class ButtonsFragment : Fragment() {
+class ButtonsFragment @Inject constructor(
+    var logger: LoggerDataSource,
+    var navigator: AppNavigator
+) : Fragment() {
 
-    @Inject lateinit var logger: LoggerDataSource
-    @Inject lateinit var navigator: AppNavigator
+//    @Inject lateinit var logger: LoggerDataSource
+//    @Inject lateinit var navigator: AppNavigator
 
     override fun onCreateView(
         inflater: LayoutInflater,
